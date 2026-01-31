@@ -20,4 +20,4 @@ spec:
           # Cooler GitOps Trick: Wir konfigurieren die App über ENV-Variablen!
           env:
             - name: MESSAGE
-              value: "Hallo aus meinem Homelab! 👋 V2"
+              value: "Hallo aus meinem Homelab! 👋 Ich mag Katzen! "
