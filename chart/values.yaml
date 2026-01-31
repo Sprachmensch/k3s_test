@@ -6,6 +6,6 @@ image:
 replicaCount: 1
 
 service:
-  type: LoadBalancer # Oder NodePort, wenn LoadBalancer bei dir zickt
+  type: NodePort
   port: 80
-  nodePort: 30090 # Ein anderer fester Port zum Testen
+  nodePort: 30080 # Ein anderer fester Port zum Testen
