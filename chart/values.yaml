@@ -1,11 +1,17 @@
 image:
   repository: paulbouwer/hello-kubernetes
   tag: "1.10"
-  containerPort: 8080 # Diese App hört intern auf 8080
+  containerPort: 8080
 
 replicaCount: 1
 
 service:
-  type: NodePort
+  type: ClusterIP   # <--- WICHTIG: Zurück auf ClusterIP (nur intern erreichbar)
   port: 80
-  nodePort: 30080 # Ein anderer fester Port zum Testen
+
+ingress:            # <--- NEU
+  enabled: true
+  # Hier nutzen wir den nip.io Trick.
+  # Das löst automatisch auf deine Server-IP 192.168.122.22 auf.
+  host: flask.192.168.122.22.nip.io
+
