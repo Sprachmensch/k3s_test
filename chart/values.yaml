@@ -1,0 +1,11 @@
+image:
+  repository: paulbouwer/hello-kubernetes
+  tag: "1.10"
+  containerPort: 8080 # Diese App hört intern auf 8080
+
+replicaCount: 1
+
+service:
+  type: LoadBalancer # Oder NodePort, wenn LoadBalancer bei dir zickt
+  port: 80
+  nodePort: 30090 # Ein anderer fester Port zum Testen
